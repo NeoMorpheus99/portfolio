@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-theme">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Norbu Tee Lepcha
@@ -58,11 +58,6 @@ function Navbar() {
                   </a>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
             </li>
           </ul>
           <form className="d-flex" role="search">

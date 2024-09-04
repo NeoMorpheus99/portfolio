@@ -1,21 +1,17 @@
-import NavBar from "./Nav.jsx";
-//import Profile from "./Profile.jsx";
-import Card from "./Cardy.jsx";
-import Carousel from "./Carousel.jsx";
+// //import Profile from "./Profile.jsx";
+// import Card from "./Cardy.jsx";
+// import Carousel from "./Carousel.jsx";
+// import HeroPage from "./HeroPage.jsx";
+
+import Navbar from "./Nav.jsx";
+import Jumbotron from "./Jumbotron.jsx";
 
 function App() {
   return (
     <>
       <div className="App">
-        <NavBar />
-        <div className="row">
-          <div className="col-md-6">
-            <Card />
-          </div>
-          <div className="col">
-            <Carousel />
-          </div>
-        </div>
+        <Navbar />
+        <Jumbotron />
       </div>
     </>
   );
