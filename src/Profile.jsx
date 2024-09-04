@@ -3,7 +3,6 @@
 import ProfileHeader from "./ProfileHeader";
 import ProfileDetails from "./ProfileDetails";
 import profileData from "./ProfileData";
-import "./profile.css";
 
 const Profile = () => {
   return (

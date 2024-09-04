@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // src/ProfileHeader.jsx
 
 const ProfileHeader = ({ name, age, profileImage }) => {

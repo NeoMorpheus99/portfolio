@@ -3,12 +3,12 @@ const profileData = {
   name: "Norbu Tshering Lepcha",
   email: "lepchaofficial21@gmail.com",
   bio: "Software engineer with a passion for developing innovative programs. Experienced in JavaScript, React, and Node.js.",
-  profileImage: "https://via.placeholder.com/150",
+  profileImage: "profile.jpg",
   address: {
-    street: "123 Main St",
-    city: "Anytown",
-    state: "Anystate",
-    zip: "12345",
+    street: "Changbangdu",
+    city: "Thimphu",
+    state: "Thimphu",
+    zip: "000000",
   },
 };
 

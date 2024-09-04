@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // src/ProfileDetails.jsx
 
 const ProfileDetails = ({ email, bio, address }) => {
