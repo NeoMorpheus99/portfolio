@@ -3,13 +3,25 @@ function Carousel() {
     <div id="carouselExample" className="carousel slide mt-3">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="logo.png" className="d-block w-100" alt="..." />
+          <img
+            src="bits.png"
+            className="d-block w-100 carousel-img"
+            alt="..."
+          />
         </div>
         <div className="carousel-item">
-          <img src="bits.png" className="d-block w-100" alt="..." />
+          <img
+            src="bits.png"
+            className="d-block w-100 carousel-img"
+            alt="..."
+          />
         </div>
         <div className="carousel-item">
-          <img src="profile.jpg" className="d-block w-100" alt="..." />
+          <img
+            src="bits.png"
+            className="d-block w-100 carousel-img"
+            alt="..."
+          />
         </div>
       </div>
       <button

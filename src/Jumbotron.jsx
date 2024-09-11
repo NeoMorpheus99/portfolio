@@ -1,4 +1,5 @@
 import profileData from "./ProfileData";
+import Navbar from "./Nav";
 
 const Jumbotron = () => {
   const containerStyle = {
@@ -11,6 +12,7 @@ const Jumbotron = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
+    position: "relative", // Added to allow absolute positioning
   };
 
   const contentStyle = {
@@ -22,8 +24,19 @@ const Jumbotron = () => {
     textAlign: "left",
   };
 
+  const navbarStyle = {
+    position: "absolute",
+    top: "20px",
+    right: "20px",
+    zIndex: 1, // Ensure the navbar stays on top
+  };
+
   return (
     <div className="container-fluid d-flex " style={containerStyle}>
+      {/* Position the Navbar at the top-right */}
+      <div style={navbarStyle}>
+        <Navbar />
+      </div>
       <div
         className="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
         style={contentStyle}

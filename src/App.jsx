@@ -3,17 +3,17 @@
 // import Carousel from "./Carousel.jsx";
 // import HeroPage from "./HeroPage.jsx";
 
-import Navbar from "./Nav.jsx";
 import Jumbotron from "./Jumbotron.jsx";
 import Carousel from "./Carousel.jsx";
+import Resume from "./Resume.jsx";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Navbar />
         <Jumbotron />
         <Carousel />
+        <Resume></Resume>
       </div>
     </>
   );
