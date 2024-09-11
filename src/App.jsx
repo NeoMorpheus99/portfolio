@@ -5,6 +5,7 @@
 
 import Navbar from "./Nav.jsx";
 import Jumbotron from "./Jumbotron.jsx";
+import Carousel from "./Carousel.jsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Jumbotron />
+        <Carousel />
       </div>
     </>
   );

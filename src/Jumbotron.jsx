@@ -23,10 +23,7 @@ const Jumbotron = () => {
   };
 
   return (
-    <div
-      className="container-fluid py-5 mb-4 d-flex justify-content-center"
-      style={containerStyle}
-    >
+    <div className="container-fluid d-flex " style={containerStyle}>
       <div
         className="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
         style={contentStyle}

@@ -36,17 +36,21 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Sites
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Action
+                  <a
+                    className="dropdown-item"
+                    href="http://teelepcha.com/"
+                    target="blank"
+                  >
+                    Blog
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Another action
+                    Github
                   </a>
                 </li>
                 <li>
@@ -54,7 +58,7 @@ function Navbar() {
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Something else here
+                    Socials
                   </a>
                 </li>
               </ul>

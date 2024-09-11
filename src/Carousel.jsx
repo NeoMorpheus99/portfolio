@@ -6,10 +6,10 @@ function Carousel() {
           <img src="logo.png" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src="..." className="d-block w-100" alt="..." />
+          <img src="bits.png" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src="..." className="d-block w-100" alt="..." />
+          <img src="profile.jpg" className="d-block w-100" alt="..." />
         </div>
       </div>
       <button
