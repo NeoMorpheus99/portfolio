@@ -1,10 +1,10 @@
 import profileData from "./ProfileData";
-import Navbar from "./Nav";
+import Navbar from "./component/Nav";
 
 const Jumbotron = () => {
   const containerStyle = {
     backgroundImage:
-      "linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1124&amp;q=100')",
+      "linear-gradient(rgba(12, 76, 138, 0.3), rgba(151, 213, 224, 0.3)), url('/portfolio/pro2.jpg')",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -38,7 +38,7 @@ const Jumbotron = () => {
         <Navbar />
       </div>
       <div
-        className="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12"
+        className="p-5 mb-4 lc-block col-xxl-6 col-lg-6 col-6"
         style={contentStyle}
       >
         <div className="lc-block">

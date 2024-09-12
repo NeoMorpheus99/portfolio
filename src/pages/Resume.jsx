@@ -1,16 +1,17 @@
-import profileData from "./ProfileData";
+import Navbar from "../component/Nav";
+import profileData from "../ProfileData";
 
 const Resume = () => {
   const containerStyle = {
     display: "flex",
     justifyContent: "space-between",
-    padding: "20px",
   };
 
   const bioStyle = {
     flex: "1",
     padding: "20px",
     textAlign: "left",
+    backgroundColor: "red",
   };
 
   const photoStyle = {
@@ -20,11 +21,14 @@ const Resume = () => {
 
   const lowerSectionStyle = {
     marginTop: "40px",
+    padding: "20px",
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid bg-theme">
       {/* Upper Section: Photo and Bio */}
+      <Navbar />
+      <br></br>
       <div style={containerStyle}>
         <div style={bioStyle}>
           <h2>{profileData.name}</h2>
@@ -42,13 +46,14 @@ const Resume = () => {
         </div>
         <div style={photoStyle}>
           <img
-            src="https://via.placeholder.com/150"
+            src={profileData.profileImage}
             alt="Profile"
-            className="img-fluid rounded-circle"
-            style={{ width: "150px", height: "150px" }}
+            className="img-fluid"
+            style={{ width: "250px", height: "250px" }}
           />
         </div>
       </div>
+      <div style={lowerSectionStyle}>BIO: Nam ejaskd</div>
 
       {/* Lower Section: Tables and Additional Info */}
       <div style={lowerSectionStyle}>
