@@ -31,12 +31,13 @@ function Navbar() {
           className="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav mb-2 mb-lg-0">
+          <ul className="navbar-nav mb-4 mb-lg-0">
             <NavItem to="/">Home</NavItem>
             <NavItem to="/resume">Resume</NavItem>
             <NavItem to="/projects">Projects</NavItem>
             {/* <NavItem to="/github">Github Repo</NavItem>
             <NavItem to="/socials">Socials</NavItem> */}
+            <NavItem to="/certificates">Certificates</NavItem>
             <NavItem to="/contact">Contact</NavItem>
           </ul>
         </div>

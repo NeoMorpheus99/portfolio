@@ -6,6 +6,7 @@ import Resume from "./pages/Resume.jsx";
 import ErrorPage from "./error.jsx";
 import App from "./App.jsx";
 import Projects from "./pages/projects.jsx";
+import ImageStack from "./pages/Certificates.jsx";
 
 const router = createBrowserRouter(
   [
@@ -21,6 +22,10 @@ const router = createBrowserRouter(
     {
       path: "projects",
       element: <Projects />,
+    },
+    {
+      path: "certificates",
+      element: <ImageStack />,
     },
   ],
   {
