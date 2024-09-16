@@ -11,6 +11,10 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .bg-theme {
   background-color: #5aa5db;
 }

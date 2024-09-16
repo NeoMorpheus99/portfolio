@@ -1,5 +1,6 @@
 import profileData from "./ProfileData";
 import Navbar from "./component/Nav";
+import { Link } from "react-router-dom";
 
 const Jumbotron = () => {
   const containerStyle = {
@@ -52,9 +53,9 @@ const Jumbotron = () => {
           </div>
         </div>
         <div className="lc-block">
-          <a className="btn btn-dark" href="#" role="button">
-            Know More
-          </a>
+          <Link to="/resume" className="btn btn-info">
+            Resume
+          </Link>
         </div>
       </div>
     </div>

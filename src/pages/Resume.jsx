@@ -15,7 +15,10 @@ const Resume = () => {
             className="img-fluid rounded-circle mb-4"
             style={{ width: "250px", height: "265px" }}
           />
-          <div className="p-3 bg-orange rounded shadow-sm text-start">
+          <div
+            className="p-3 bg-orange rounded shadow-sm text-start"
+            style={{ fontSize: "21px" }}
+          >
             <h2>{profileData.name}</h2>
             <p>
               <strong>Email:</strong> {profileData.email}
@@ -23,7 +26,33 @@ const Resume = () => {
               <strong>Phone:</strong> {profileData.phoneNo}
               <br />
               <strong>Address:</strong> {profileData.address.city}
+              <br></br>
+              <strong>Blog:</strong>{" "}
+              <a href={profileData.website} target="_blank">
+                {" "}
+                Lepcha Blogs
+              </a>
+              <br />
             </p>
+          </div>
+          <div
+            className="p-3 bg-orange rounded shadow-sm text-center mt-4"
+            style={{ fontSize: "21px" }}
+          >
+            <h4>Social Links</h4>
+            <hr />
+            {profileData.socials.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                className="mx-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "no-decoration", color: "black" }}
+              >
+                <i className={item.icon}></i>
+              </a>
+            ))}
           </div>
         </div>
 

@@ -8,8 +8,15 @@ const profileData = {
   about: "",
   skills: ["JavaScript", "React", "Node.js", "MongoDB", "Express"],
   experience: [],
-  website: "",
-  socials: "",
+  website: "https://teelepcha.com/",
+  socials: [
+    { name: "facebook", link: "#", icon: "bi bi-facebook" },
+    { name: "whatsapp", link: "#", icon: "bi bi-whatsapp" },
+    { name: "insta", link: "#", icon: "bi bi-instagram" },
+    { name: "threads", link: "#", icon: "bi bi-threads-fill" },
+    { name: "github", link: "#", icon: "bi bi-github" },
+    { name: "linkedin", link: "#", icon: "bi bi-linkedin" },
+  ],
 
   address: {
     street: "Changbangdu",
