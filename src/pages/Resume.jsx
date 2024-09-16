@@ -16,8 +16,8 @@ const Resume = () => {
             style={{ width: "250px", height: "265px" }}
           />
           <div
-            className="p-3 bg-orange rounded shadow-sm text-start"
-            style={{ fontSize: "21px" }}
+            className="p-3 bg-orange rounded shadow-sm text-start shadow"
+            style={{ fontSize: "var(--text)" }}
           >
             <h2>{profileData.name}</h2>
             <p>
@@ -34,6 +34,14 @@ const Resume = () => {
               </a>
               <br />
             </p>
+          </div>
+          <div
+            className="p-3 bg-orange rounded shadow-sm text-center mt-4"
+            style={{ fontSize: "var(--text)" }}
+          >
+            <h4>About</h4>
+            <hr />
+            {profileData.about}
           </div>
           <div
             className="p-3 bg-orange rounded shadow-sm text-center mt-4"
@@ -92,59 +100,84 @@ const Resume = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>ABC Corp</td>
-                  <td>Senior Developer</td>
-                  <td>2019 - Present</td>
-                  <td>
-                    Lead web development team, manage project lifecycles, and
-                    mentor junior developers.
-                  </td>
-                </tr>
-                <tr>
-                  <td>XYZ Inc</td>
-                  <td>Software Engineer</td>
-                  <td>2016 - 2019</td>
-                  <td>
-                    Developed web applications, optimized databases, and
-                    improved UI/UX designs.
-                  </td>
-                </tr>
+                {profileData.experience.map((work, index) => (
+                  <tr key={index}>
+                    <td>{work.company}</td>
+                    <td>{work.role}</td>
+                    <td>{work.duration}</td>
+                    <td>{work.resposibilities}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-          <div className="p-3 bg-white rounded shadow-sm mb-3">
-            <h3>Professional Work Experience</h3>
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Company</th>
-                  <th>Role</th>
-                  <th>Duration</th>
-                  <th>Responsibilities</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ABC Corp</td>
-                  <td>Senior Developer</td>
-                  <td>2019 - Present</td>
-                  <td>
-                    Lead web development team, manage project lifecycles, and
-                    mentor junior developers.
-                  </td>
-                </tr>
-                <tr>
-                  <td>XYZ Inc</td>
-                  <td>Software Engineer</td>
-                  <td>2016 - 2019</td>
-                  <td>
-                    Developed web applications, optimized databases, and
-                    improved UI/UX designs.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="row p-2">
+            <div className="col p-3 bg-white rounded shadow-sm mb-3 mx-2">
+              <h3>Hard Skills</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Duration</th>
+                    <th>Responsibilities</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ABC Corp</td>
+                    <td>Senior Developer</td>
+                    <td>2019 - Present</td>
+                    <td>
+                      Lead web development team, manage project lifecycles, and
+                      mentor junior developers.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Inc</td>
+                    <td>Software Engineer</td>
+                    <td>2016 - 2019</td>
+                    <td>
+                      Developed web applications, optimized databases, and
+                      improved UI/UX designs.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="col p-3 bg-white rounded shadow-sm mb-3">
+              <h3>Soft Skills</h3>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Duration</th>
+                    <th>Responsibilities</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ABC Corp</td>
+                    <td>Senior Developer</td>
+                    <td>2019 - Present</td>
+                    <td>
+                      Lead web development team, manage project lifecycles, and
+                      mentor junior developers.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Inc</td>
+                    <td>Software Engineer</td>
+                    <td>2016 - 2019</td>
+                    <td>
+                      Developed web applications, optimized databases, and
+                      improved UI/UX designs.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

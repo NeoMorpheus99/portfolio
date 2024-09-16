@@ -3,11 +3,20 @@ const profileData = {
   name: "Norbu Tshering Lepcha",
   email: "lepchaofficial21@gmail.com",
   bio: "Software engineer with a passion for developing innovative programs. Experienced in JavaScript, React, and Node.js.",
-  profileImage: "profile.jpg",
+  profileImage: "passport.jpg",
   phoneNo: "+975-17922146",
-  about: "",
+  about:
+    "A self driven, inquisitive, B.Tech(Hons) graduate skilled in various programign lanagugae and always looking forward to contirbute in the field of research and development.",
+
   skills: ["JavaScript", "React", "Node.js", "MongoDB", "Express"],
-  experience: [],
+  experience: [
+    {
+      company: "BIL",
+      role: "m-bil Focal person",
+      duration: "2020-2021",
+      resposibilities: "Mamahingmbil app",
+    },
+  ],
   website: "https://teelepcha.com/",
   socials: [
     { name: "facebook", link: "#", icon: "bi bi-facebook" },
@@ -17,7 +26,6 @@ const profileData = {
     { name: "github", link: "#", icon: "bi bi-github" },
     { name: "linkedin", link: "#", icon: "bi bi-linkedin" },
   ],
-
   address: {
     street: "Changbangdu",
     city: "Thimphu",

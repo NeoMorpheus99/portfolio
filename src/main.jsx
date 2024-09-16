@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Resume from "./pages/Resume.jsx";
 import ErrorPage from "./error.jsx";
 import App from "./App.jsx";
+import Projects from "./pages/projects.jsx";
 
 const router = createBrowserRouter(
   [
@@ -16,6 +17,10 @@ const router = createBrowserRouter(
     {
       path: "resume",
       element: <Resume />,
+    },
+    {
+      path: "projects",
+      element: <Projects />,
     },
   ],
   {

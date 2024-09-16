@@ -2,7 +2,7 @@
   --primary-color: rgba(12, 76, 138);
   --primary2: rgba(151, 213, 224);
   --secondary-color: #2ecc71;
-  --font-size: 16px;
+  --text: 15px;
   --padding: 10px;
 }
 
@@ -60,4 +60,9 @@ a {
 
 .bg-orange {
   background-color: rgba(236, 173, 55, 0.904);
+}
+.shadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
 }

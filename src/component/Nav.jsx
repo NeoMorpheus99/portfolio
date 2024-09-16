@@ -35,8 +35,8 @@ function Navbar() {
             <NavItem to="/">Home</NavItem>
             <NavItem to="/resume">Resume</NavItem>
             <NavItem to="/projects">Projects</NavItem>
-            <NavItem to="/github">Github Repo</NavItem>
-            <NavItem to="/socials">Socials</NavItem>
+            {/* <NavItem to="/github">Github Repo</NavItem>
+            <NavItem to="/socials">Socials</NavItem> */}
             <NavItem to="/contact">Contact</NavItem>
           </ul>
         </div>
