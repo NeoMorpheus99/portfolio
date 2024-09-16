@@ -7,8 +7,20 @@ const profileData = {
   phoneNo: "+975-17922146",
   about:
     "A self driven, inquisitive, B.Tech(Hons) graduate skilled in various programign lanagugae and always looking forward to contirbute in the field of research and development.",
+  website: "https://teelepcha.com/",
 
-  skills: ["JavaScript", "React", "Node.js", "MongoDB", "Express"],
+  hardskills: [
+    { name: "JavaScript" },
+    { name: "React" },
+    { name: "Node.js" },
+    { name: "MongoDB" },
+    { name: "Express" },
+  ],
+  softskills: [
+    { name: "Communication" },
+    { name: "Negotiations" },
+    { name: "Emotional Intelligence" },
+  ],
   experience: [
     {
       company: "BIL",
@@ -17,7 +29,14 @@ const profileData = {
       resposibilities: "Mamahingmbil app",
     },
   ],
-  website: "https://teelepcha.com/",
+  awards: [
+    {
+      title: "BIL",
+      awardedBy: "m-bil Focal person",
+      year: "",
+    },
+  ],
+
   socials: [
     { name: "facebook", link: "#", icon: "bi bi-facebook" },
     { name: "whatsapp", link: "#", icon: "bi bi-whatsapp" },

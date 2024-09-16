@@ -89,6 +89,29 @@ const Resume = () => {
           </div>
 
           <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Awards and Achievements</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Duration</th>
+                  <th>Responsibilities</th>
+                </tr>
+              </thead>
+              <tbody>
+                {profileData.experience.map((work, index) => (
+                  <tr key={index}>
+                    <td>{work.company}</td>
+                    <td>{work.role}</td>
+                    <td>{work.duration}</td>
+                    <td>{work.resposibilities}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
             <h3>Professional Work Experience</h3>
             <table className="table table-striped">
               <thead>
@@ -117,31 +140,15 @@ const Resume = () => {
               <table className="table table-striped">
                 <thead>
                   <tr>
-                    <th>Company</th>
-                    <th>Role</th>
-                    <th>Duration</th>
-                    <th>Responsibilities</th>
+                    <th>Skill</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>ABC Corp</td>
-                    <td>Senior Developer</td>
-                    <td>2019 - Present</td>
-                    <td>
-                      Lead web development team, manage project lifecycles, and
-                      mentor junior developers.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>XYZ Inc</td>
-                    <td>Software Engineer</td>
-                    <td>2016 - 2019</td>
-                    <td>
-                      Developed web applications, optimized databases, and
-                      improved UI/UX designs.
-                    </td>
-                  </tr>
+                  {profileData.hardskills.map((skill, index) => (
+                    <tr key={index}>
+                      <td>{skill.name}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -150,31 +157,15 @@ const Resume = () => {
               <table className="table table-striped">
                 <thead>
                   <tr>
-                    <th>Company</th>
-                    <th>Role</th>
-                    <th>Duration</th>
-                    <th>Responsibilities</th>
+                    <th>Skills</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>ABC Corp</td>
-                    <td>Senior Developer</td>
-                    <td>2019 - Present</td>
-                    <td>
-                      Lead web development team, manage project lifecycles, and
-                      mentor junior developers.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>XYZ Inc</td>
-                    <td>Software Engineer</td>
-                    <td>2016 - 2019</td>
-                    <td>
-                      Developed web applications, optimized databases, and
-                      improved UI/UX designs.
-                    </td>
-                  </tr>
+                  {profileData.softskills.map((skill, index) => (
+                    <tr key={index}>
+                      <td>{skill.name}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

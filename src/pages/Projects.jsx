@@ -1,162 +1,81 @@
-import { useState } from "react";
-import Navbar from "../component/Nav";
-
 // Sample project data
-const projectData = [
-  {
-    id: 1,
-    title: "Project One",
-    description: "This is the description for Project One.",
-    image: "logo.png",
-  },
-  {
-    id: 2,
-    title: "Project Two",
-    description: "This is the description for Project Two.",
-    image: "logo.png",
-  },
-  {
-    id: 3,
-    title: "Project Three",
-    description: "This is the description for Project Three.",
-    image: "logo.png",
-  },
-  // Add more projects here
-];
+import ProjectData from "../component/ProjectData";
+import Navbar from "../component/Nav";
+import { useState } from "react";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseDetails = () => {
-    setSelectedProject(null);
-  };
-
   return (
-    <div className="projects-container">
-      <Navbar />
-      {/* Centered main image */}
-      <div className="center-image">
-        <img src="profile.jpg" alt="Profile" className="profile-img" />
+    <>
+      <div>
+        <Navbar />
       </div>
-
-      {/* Surrounding project images */}
-      <div className="project-grid">
-        {projectData.map((project) => (
+      <div className="projects-container">
+        {ProjectData.AI_ML.map((project, index) => (
           <div
-            key={project.id}
-            className="project-item"
-            onClick={() => handleProjectClick(project)}
+            key={index}
+            className={`polaroid ${
+              index % 2 === 0 ? "rotate_left" : "rotate_right"
+            }`}
           >
             <img
               src={project.image}
-              alt={project.title}
-              className="project-img"
+              alt={project.name}
+              width="284"
+              height="213"
             />
+            <p className="caption">{project.name}</p>
+            <p className="description">{project.excerpt}</p>
+            <div className="btn btn-info">More deatisl</div>
           </div>
         ))}
-      </div>
 
-      {/* Modal to show project details when clicked */}
-      {selectedProject && (
-        <div className="project-details-modal">
-          <div className="project-details-content">
-            <h2>{selectedProject.title}</h2>
-            <p>{selectedProject.description}</p>
-            <button onClick={handleCloseDetails}>Close</button>
-          </div>
-        </div>
-      )}
+        <style>{`
+        body {
+          margin: 30px;
+          background-color: #E9E9E9;
+        }
 
-      <style>{`
         .projects-container {
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: 100vh;
-          position: relative;
-        }
-
-        .center-image {
-          margin-bottom: 50px;
-        }
-
-        .profile-img {
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          border: 5px solid #fff;
-          object-fit: cover;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-grid {
-          display: flex;
+          justify-content: space-around;
           flex-wrap: wrap;
-          justify-content: center;
-          gap: 20px;
         }
 
-        .project-item {
-          width: 150px;
-          height: 150px;
-          border-radius: 10px;
-          overflow: hidden;
-          position: relative;
-          cursor: pointer;
-          transition: transform 0.3s ease;
+        .polaroid {
+          width: 284px;
+          padding: 10px 10px 20px 10px;
+          border: 1px solid #BFBFBF;
+          background-color: white;
+          box-shadow: 10px 10px 5px #aaaaaa;
+          margin: 20px;
+          transition: transform 0.3s ease, z-index 0.3s ease;
+          position: relative; /* Make sure z-index works */
         }
 
-        .project-item:hover {
-          transform: scale(1.1);
+        .rotate_right {
+          float: left;
+          transform: rotate(7deg);
         }
 
-        .project-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
+        .rotate_left {
+          float: left;
+          transform: rotate(-8deg);
         }
 
-        .project-details-modal {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .polaroid:hover {
+          transform: scale(1.1) rotate(0); /* Removes tilt and zooms in */
+          z-index: 2; /* Bring the hovered element forward */
+          box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
         }
 
-        .project-details-content {
-          background-color: #fff;
-          padding: 20px;
-          border-radius: 10px;
-          max-width: 500px;
+        .caption {
           text-align: center;
-        }
-
-        .project-details-content h2 {
-          margin-bottom: 20px;
-        }
-
-        .project-details-content button {
-          padding: 10px 20px;
-          border: none;
-          background-color: #007bff;
-          color: #fff;
-          border-radius: 5px;
-          cursor: pointer;
           font-size: 16px;
+          margin-top: 10px;
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 };
 
