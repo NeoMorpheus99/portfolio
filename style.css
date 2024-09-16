@@ -14,6 +14,9 @@ body {
 .bg-theme {
   background-color: #5aa5db;
 }
+.bg-theme-2 {
+  background-color: #025d6dab;
+}
 .carousel-img {
   height: 400px; /* Set the desired height */
   object-fit: cover; /* Ensures the image covers the entire area */
@@ -27,13 +30,30 @@ body {
 }
 
 .custom-nav:hover {
-  color: white;
-  background-color: var(--primary-color);
-  border-radius: 25%;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); /* Adjust values as needed */
+  color: rgb(72, 255, 0);
+  font-size: larger;
+
+  /* background-color: var(--primary-color); */
+
+  /* border-radius: 10%;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); Adjust values as needed */
 }
 
 .custom-nav.active {
   font-weight: bold; /* Example style for active link */
-  color: #007bff; /* Example color for active link */
+  color: #000000; /* Example color for active link */
+}
+
+.blur_effect {
+  backdrop-filter: blur(6px) saturate(102%);
+  -webkit-backdrop-filter: blur(6px) saturate(102%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  text-align: left;
+  padding: 30px;
+}
+
+.bg-orange {
+  background-color: rgba(236, 173, 55, 0.904);
 }

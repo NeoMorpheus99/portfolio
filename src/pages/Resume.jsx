@@ -2,110 +2,122 @@ import Navbar from "../component/Nav";
 import profileData from "../ProfileData";
 
 const Resume = () => {
-  const containerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-  };
-
-  const bioStyle = {
-    flex: "1",
-    padding: "20px",
-    textAlign: "left",
-    backgroundColor: "red",
-  };
-
-  const photoStyle = {
-    flex: "0 0 200px", // Width for the photo
-    textAlign: "center",
-  };
-
-  const lowerSectionStyle = {
-    marginTop: "40px",
-    padding: "20px",
-  };
-
   return (
-    <div className="container-fluid bg-theme">
-      {/* Upper Section: Photo and Bio */}
+    <div className="container-fluid bg-theme-2 p-3">
       <Navbar />
-      <br></br>
-      <div style={containerStyle}>
-        <div style={bioStyle}>
-          <h2>{profileData.name}</h2>
-          <p>
-            <strong>Email:</strong> {profileData.email}
-            <br />
-            <strong>Phone:</strong>
-            <br />
-            <strong>Address:</strong>
-          </p>
-          <p>
-            <strong>Profile:</strong> <br />
-            {profileData.bio}
-          </p>
-        </div>
-        <div style={photoStyle}>
+      <br />
+      <div className="row">
+        {/* Left Column: Photo and Bio */}
+        <div className="col-md-3 text-center blur_effect">
           <img
             src={profileData.profileImage}
             alt="Profile"
-            className="img-fluid"
-            style={{ width: "250px", height: "250px" }}
+            className="img-fluid rounded-circle mb-4"
+            style={{ width: "250px", height: "265px" }}
           />
+          <div className="p-3 bg-orange rounded shadow-sm text-start">
+            <h2>{profileData.name}</h2>
+            <p>
+              <strong>Email:</strong> {profileData.email}
+              <br />
+              <strong>Phone:</strong> {profileData.phoneNo}
+              <br />
+              <strong>Address:</strong> {profileData.address.city}
+            </p>
+          </div>
         </div>
-      </div>
-      <div style={lowerSectionStyle}>BIO: Nam ejaskd</div>
 
-      {/* Lower Section: Tables and Additional Info */}
-      <div style={lowerSectionStyle}>
-        <h3>Work Experience</h3>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Role</th>
-              <th>Duration</th>
-              <th>Responsibilities</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ABC Corp</td>
-              <td>Senior Developer</td>
-              <td>2019 - Present</td>
-              <td>
-                Lead web development team, manage project lifecycles, and mentor
-                junior developers.
-              </td>
-            </tr>
-            <tr>
-              <td>XYZ Inc</td>
-              <td>Software Engineer</td>
-              <td>2016 - 2019</td>
-              <td>
-                Developed web applications, optimized databases, and improved
-                UI/UX designs.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        {/* Right Column: Work Experience and Education */}
+        <div className="col-md-9 mb-2">
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Education</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Level</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                {profileData.schooling.map((school, index) => (
+                  <tr key={index}>
+                    <td>{school.name}</td>
+                    <td>{school.Level}</td>
+                    <td>{school.year}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
-        <h3>Education</h3>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Institution</th>
-              <th>Degree</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>University of Springfield</td>
-              <td>Bachelor of Science in Computer Science</td>
-              <td>2012 - 2016</td>
-            </tr>
-          </tbody>
-        </table>
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Professional Work Experience</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Duration</th>
+                  <th>Responsibilities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ABC Corp</td>
+                  <td>Senior Developer</td>
+                  <td>2019 - Present</td>
+                  <td>
+                    Lead web development team, manage project lifecycles, and
+                    mentor junior developers.
+                  </td>
+                </tr>
+                <tr>
+                  <td>XYZ Inc</td>
+                  <td>Software Engineer</td>
+                  <td>2016 - 2019</td>
+                  <td>
+                    Developed web applications, optimized databases, and
+                    improved UI/UX designs.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Professional Work Experience</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Duration</th>
+                  <th>Responsibilities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ABC Corp</td>
+                  <td>Senior Developer</td>
+                  <td>2019 - Present</td>
+                  <td>
+                    Lead web development team, manage project lifecycles, and
+                    mentor junior developers.
+                  </td>
+                </tr>
+                <tr>
+                  <td>XYZ Inc</td>
+                  <td>Software Engineer</td>
+                  <td>2016 - 2019</td>
+                  <td>
+                    Developed web applications, optimized databases, and
+                    improved UI/UX designs.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );
