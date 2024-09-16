@@ -72,7 +72,7 @@ const Resume = () => {
               <thead>
                 <tr>
                   <th>Institution</th>
-                  <th>Level</th>
+                  <th>Study</th>
                   <th>Year</th>
                 </tr>
               </thead>
@@ -80,7 +80,7 @@ const Resume = () => {
                 {profileData.schooling.map((school, index) => (
                   <tr key={index}>
                     <td>{school.name}</td>
-                    <td>{school.Level}</td>
+                    <td>{school.Title}</td>
                     <td>{school.year}</td>
                   </tr>
                 ))}
@@ -93,19 +93,17 @@ const Resume = () => {
             <table className="table table-striped">
               <thead>
                 <tr>
-                  <th>Company</th>
-                  <th>Role</th>
-                  <th>Duration</th>
-                  <th>Responsibilities</th>
+                  <th>Title</th>
+                  <th>Awarded By</th>
+                  <th>Remarks</th>
                 </tr>
               </thead>
               <tbody>
-                {profileData.experience.map((work, index) => (
+                {profileData.awards.map((award, index) => (
                   <tr key={index}>
-                    <td>{work.company}</td>
-                    <td>{work.role}</td>
-                    <td>{work.duration}</td>
-                    <td>{work.resposibilities}</td>
+                    <td>{award.title}</td>
+                    <td>{award.awardedBy}</td>
+                    <td>{award.reason}</td>
                   </tr>
                 ))}
               </tbody>
