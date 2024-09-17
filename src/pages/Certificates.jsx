@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../ImageGrid.css"; // Import the CSS file
+import "../../styles/ImageGrid.css"; // Import the CSS file
 import certificateData from "../component/CertificatesData";
 import Navbar from "../component/Nav";
 

@@ -1,21 +1,35 @@
-// Sample project data
 import ProjectData from "../component/ProjectData";
 import Navbar from "../component/Nav";
 import { useState } from "react";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleClose = () => {
+    setSelectedProject(null);
+  };
+
   return (
-    <>
-      <div>
-        <Navbar />
-      </div>
-      <div className="projects-container">
+    <div className="container-fluid">
+      <Navbar />
+      <div
+        className="projects-container"
+        data-toggle="tooltip"
+        data-placement="left"
+        data-delay="0"
+        title="Click for more details"
+      >
         {ProjectData.AI_ML.map((project, index) => (
           <div
             key={index}
             className={`polaroid ${
               index % 2 === 0 ? "rotate_left" : "rotate_right"
             }`}
+            onClick={() => handleClick(project)}
           >
             <img
               src={project.image}
@@ -25,57 +39,66 @@ const Projects = () => {
             />
             <p className="caption">{project.name}</p>
             <p className="description">{project.excerpt}</p>
-            <div className="btn btn-info">More deatisl</div>
           </div>
         ))}
-
-        <style>{`
-        body {
-          margin: 30px;
-          background-color: #E9E9E9;
-        }
-
-        .projects-container {
-          display: flex;
-          justify-content: space-around;
-          flex-wrap: wrap;
-        }
-
-        .polaroid {
-          width: 284px;
-          padding: 10px 10px 20px 10px;
-          border: 1px solid #BFBFBF;
-          background-color: white;
-          box-shadow: 10px 10px 5px #aaaaaa;
-          margin: 20px;
-          transition: transform 0.3s ease, z-index 0.3s ease;
-          position: relative; /* Make sure z-index works */
-        }
-
-        .rotate_right {
-          float: left;
-          transform: rotate(7deg);
-        }
-
-        .rotate_left {
-          float: left;
-          transform: rotate(-8deg);
-        }
-
-        .polaroid:hover {
-          transform: scale(1.1) rotate(0); /* Removes tilt and zooms in */
-          z-index: 2; /* Bring the hovered element forward */
-          box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-        }
-
-        .caption {
-          text-align: center;
-          font-size: 16px;
-          margin-top: 10px;
-        }
-      `}</style>
       </div>
-    </>
+
+      {selectedProject && (
+        <div className="image-modal" onClick={handleClose}>
+          <div className="modal-content">
+            <span className="close-button" onClick={handleClose}>
+              &times;
+            </span>
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.name}
+              className="modal-image"
+            />
+
+            <p className="modal-description">
+              <strong>Type of Task: </strong>
+              {selectedProject.type}
+            </p>
+            <p className="modal-description">
+              <strong>Data Set: </strong> {selectedProject.dataset}
+            </p>
+            <p className="modal-description">
+              <strong>Algorithms Used: </strong>
+              {selectedProject.algo}
+            </p>
+            <p className="modal-description">
+              <strong>Description: </strong>
+              {selectedProject.desc}
+            </p>
+            <p className="modal-description">
+              <strong>Challenges: </strong>
+              {selectedProject.challenges}
+            </p>
+            <p className="modal-description">
+              <strong>Resolution: </strong>
+              {selectedProject.resolution}
+            </p>
+            <p className="modal-description">
+              <strong>Outcome: </strong>
+              {selectedProject.outcome}
+            </p>
+            <p className="modal-description">
+              <strong>Report:</strong> {selectedProject.report}
+            </p>
+            <p className="modal-description">
+              <strong>Source Code:</strong>{" "}
+              <a
+                href={selectedProject.gitrepo}
+                target="_blank"
+                className="anchor"
+              >
+                Lung Cancer Prediction Model
+              </a>
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -11,8 +11,10 @@ body {
   height: 100vh;
 }
 
-a {
+.anchor {
   text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .bg-theme {

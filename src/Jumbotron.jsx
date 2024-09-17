@@ -9,17 +9,17 @@ const Jumbotron = () => {
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "90vh", // Adjust height to your needs
+    height: "90vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
-    position: "relative", // Added to allow absolute positioning
+    position: "relative",
   };
 
   const contentStyle = {
     backdropFilter: "blur(6px) saturate(102%)",
     WebkitBackdropFilter: "blur(6px) saturate(102%)",
-    backgroundColor: "rgba(255, 255, 255, 0.45)",
+    backgroundColor: "rgba(255, 255, 255, 0.6)",
     borderRadius: "12px",
     border: "1px solid rgba(209, 213, 219, 0.3)",
     textAlign: "left",
@@ -29,7 +29,7 @@ const Jumbotron = () => {
     position: "absolute",
     top: "20px",
     right: "20px",
-    zIndex: 1, // Ensure the navbar stays on top
+    zIndex: 1,
   };
 
   return (
@@ -48,7 +48,7 @@ const Jumbotron = () => {
           </div>
         </div>
         <div className="lc-block col-md-8">
-          <div contentEditable="true">
+          <div contentEditable="false">
             <p className="lead">{profileData.bio}</p>
           </div>
         </div>
