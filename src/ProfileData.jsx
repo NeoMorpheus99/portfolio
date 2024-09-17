@@ -2,7 +2,7 @@
 const profileData = {
   name: "Norbu Tshering Lepcha",
   email: "lepchaofficial21@gmail.com",
-  bio: "Software engineer with a passion for developing innovative programs. Experienced in JavaScript, React, and Node.js.",
+  bio: "Software engineer with a B,tech honors degree in Computer Scieence and systems Engineering",
   profileImage: "passport.jpg",
   phoneNo: "+975-17922146",
   about:
@@ -23,10 +23,11 @@ const profileData = {
   ],
   experience: [
     {
-      company: "BIL",
-      role: "m-bil Focal person",
-      duration: "2020-2021",
-      resposibilities: "Mamahingmbil app",
+      company: "Glorifying Media",
+      role: "Software Developer",
+      duration: "2021",
+      resposibilities:
+        "Developing the web interface and the dashboard of the Student Portal System",
     },
   ],
   awards: [
@@ -66,22 +67,6 @@ const profileData = {
       year: "2015 -2017",
       Grade: "66%",
       Level: "Diploma",
-      Board: "BCSE",
-    },
-    {
-      Title: "12th Boards",
-      name: "Yangchenphug Higher Secondary School",
-      year: "2013 -2014",
-      Grade: "75%",
-      Level: "Higher-secondary (+2)",
-      Board: "BHSEA",
-    },
-    {
-      Title: "10th Board",
-      name: "Yangchenphug Higher Secondary School",
-      year: "2011 -2012",
-      Grade: "86%",
-      Level: "Middle-secondary (10th)",
       Board: "BCSE",
     },
   ],

@@ -29,7 +29,6 @@ const Resume = () => {
               <br></br>
               <strong>Blog:</strong>{" "}
               <a href={profileData.website} target="_blank">
-                {" "}
                 Lepcha Blogs
               </a>
               <br />
@@ -66,49 +65,7 @@ const Resume = () => {
 
         {/* Right Column: Work Experience and Education */}
         <div className="col-md-9 mb-2">
-          <div className="p-3 bg-white rounded shadow-sm mb-3">
-            <h3>Education</h3>
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Institution</th>
-                  <th>Study</th>
-                  <th>Year</th>
-                </tr>
-              </thead>
-              <tbody>
-                {profileData.schooling.map((school, index) => (
-                  <tr key={index}>
-                    <td>{school.name}</td>
-                    <td>{school.Title}</td>
-                    <td>{school.year}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="p-3 bg-white rounded shadow-sm mb-3">
-            <h3>Awards and Achievements</h3>
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Awarded By</th>
-                  <th>Remarks</th>
-                </tr>
-              </thead>
-              <tbody>
-                {profileData.awards.map((award, index) => (
-                  <tr key={index}>
-                    <td>{award.title}</td>
-                    <td>{award.awardedBy}</td>
-                    <td>{award.reason}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          {/*EXperience*/}
           <div className="p-3 bg-white rounded shadow-sm mb-3">
             <h3>Professional Work Experience</h3>
             <table className="table table-striped">
@@ -132,6 +89,8 @@ const Resume = () => {
               </tbody>
             </table>
           </div>
+
+          {/* {Skills} */}
           <div className="row p-2">
             <div className="col p-3 bg-white rounded shadow-sm mb-3 mx-2">
               <h3>Hard Skills</h3>
@@ -167,6 +126,52 @@ const Resume = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/*Awards and Achievement*/}
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Awards and Achievements</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Awarded By</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                {profileData.awards.map((award, index) => (
+                  <tr key={index}>
+                    <td>{award.title}</td>
+                    <td>{award.awardedBy}</td>
+                    <td>{award.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Education */}
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Education</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Institution</th>
+                  <th>Study</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody>
+                {profileData.schooling.map((school, index) => (
+                  <tr key={index}>
+                    <td>{school.name}</td>
+                    <td>{school.Title}</td>
+                    <td>{school.year}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

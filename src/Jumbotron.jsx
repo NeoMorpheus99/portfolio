@@ -1,47 +1,16 @@
 import profileData from "./ProfileData";
 import Navbar from "./component/Nav";
 import { Link } from "react-router-dom";
+import "../styles/Jumbotron.css";
 
 const Jumbotron = () => {
-  const containerStyle = {
-    backgroundImage:
-      "linear-gradient(rgba(12, 76, 138, 0.3), rgba(151, 213, 224, 0.3)), url('/portfolio/pro2.jpg')",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    height: "90vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    position: "relative",
-  };
-
-  const contentStyle = {
-    backdropFilter: "blur(6px) saturate(102%)",
-    WebkitBackdropFilter: "blur(6px) saturate(102%)",
-    backgroundColor: "rgba(255, 255, 255, 0.6)",
-    borderRadius: "12px",
-    border: "1px solid rgba(209, 213, 219, 0.3)",
-    textAlign: "left",
-  };
-
-  const navbarStyle = {
-    position: "absolute",
-    top: "20px",
-    right: "20px",
-    zIndex: 1,
-  };
-
   return (
-    <div className="container-fluid d-flex " style={containerStyle}>
+    <div className="container-fluid d-flex containerStyle">
       {/* Position the Navbar at the top-right */}
-      <div style={navbarStyle}>
+      <div className="navbarStyle">
         <Navbar />
       </div>
-      <div
-        className="p-5 mb-4 lc-block col-xxl-6 col-lg-6 col-6"
-        style={contentStyle}
-      >
+      <div className="p-5 mb-4 lc-block col-xxl-6 col-lg-6 col-6 contentStyle">
         <div className="lc-block">
           <div contentEditable="true">
             <h2 className="fw-bolder display-3">{profileData.name}</h2>
