@@ -1,3 +1,3 @@
-const Footer ()=>{
-    
-}
+const Footer = () => {
+  return <></>;
+};
