@@ -1,3 +1,4 @@
+import Footer from "./component/Footer.jsx";
 import Jumbotron from "./Jumbotron.jsx";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <div className="App">
         <Jumbotron />
+        <Footer />
       </div>
     </>
   );
