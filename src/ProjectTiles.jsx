@@ -1,18 +1,15 @@
-import profileData from "./ProfileData";
+import ProjectData from "./component/ProjectData.jsx";
 
 const ProjectCard = () => {
   return (
     <>
-      <div className="row">
-        <div className="col">
-          <div className="card" style={{ width: "18rem" }}>
-            <img src="..." className="card-img-top" alt="..." />
-            <p>Tis is a sampple</p>
+      {ProjectData.slice(0, 3).map((item, index) => (
+        <div key={index} className="project-card">
+          <div className="project-card__image">
+            <img src={item.image} alt={item.title} />
           </div>
         </div>
-        <div className="col"></div>
-        <div className="col"></div>
-      </div>
+      ))}
     </>
   );
 };
