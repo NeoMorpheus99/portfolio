@@ -1,0 +1,14 @@
+.project-card {
+  transition: transform 0.3s ease;
+  background-color: rgba(187, 187, 187, 0.493);
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.project-card__image img {
+  transition: transform 0.3s ease;
+  width: 70%;
+  height: auto;
+}

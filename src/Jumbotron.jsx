@@ -5,7 +5,7 @@ import "../styles/Jumbotron.css";
 
 const Jumbotron = () => {
   return (
-    <div className="container-fluid d-flex containerStyle">
+    <div className="container-fluid d-flex containerStyle mb-4">
       {/* Position the Navbar at the top-right */}
       <div className="navbarStyle">
         <Navbar />
