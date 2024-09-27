@@ -1,4 +1,5 @@
 import Navbar from "../component/Nav";
+import ProjectData from "../component/ProjectData";
 import profileData from "../ProfileData";
 
 const Resume = () => {
@@ -84,6 +85,39 @@ const Resume = () => {
                     <td>{work.role}</td>
                     <td>{work.duration}</td>
                     <td>{work.resposibilities}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/*Projects*/}
+          <div className="p-3 bg-white rounded shadow-sm mb-3">
+            <h3>Projects</h3>
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Technologies used: </th>
+                  <th>Summary</th>
+                  <th>Source Code</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ProjectData.AI_ML.map((work, index) => (
+                  <tr key={index}>
+                    <td>{work.name}</td>
+                    <td>{work.algo}</td>
+                    <td>{work.link}</td>
+                    <td>{work.link}</td>
+                  </tr>
+                ))}
+                {ProjectData.Others.map((work, index) => (
+                  <tr key={index}>
+                    <td>{work.title}</td>
+                    <td>{work.tech}</td>
+                    <td>{work.description}</td>
+                    <td>{work.link}</td>
                   </tr>
                 ))}
               </tbody>

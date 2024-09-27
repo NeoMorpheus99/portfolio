@@ -1,7 +1,7 @@
 const ProjectData = {
   AI_ML: [
     {
-      name: "Lung cancer Prediction Model",
+      name: "Action recognization for Sign Language detection",
       image: "logo.png",
       type: "Classification",
       dataset: "so amd so",
@@ -56,6 +56,17 @@ const ProjectData = {
       outcome: " 99% accuracy",
       gitrepo: "",
       report: "",
+    },
+  ],
+
+  Others: [
+    {
+      title: "Website",
+      Duration: "2months",
+      description: "built a website",
+      image: "",
+      link: "hello",
+      tech: "html",
     },
   ],
 };
